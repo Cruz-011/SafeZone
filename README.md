@@ -1,50 +1,121 @@
-# Welcome to your Expo app 👋
+# 🚨 SafeZone - Global Solution 🚨
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 🎥 Link do vídeo de apresentação
 
-## Get started
+👉 \[Adicione aqui o link do vídeo no YouTube]
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🧠 Descrição da Solução
 
-2. Start the app
+O **SafeZone** é um aplicativo mobile desenvolvido na disciplina de **Mobile Application Development** como parte da **Global Solution da FIAP**.
 
-   ```bash
-   npx expo start
-   ```
+### 🎯 Objetivo:
 
-In the output, you'll find options to open the app in a
+Oferecer uma solução rápida e acessível para situações de emergência, permitindo que o usuário registre informações pessoais importantes, acione serviços, consulte locais seguros e se proteja **de forma prática e instantânea.**
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+**Sem login, sem barreiras. É abrir e usar.**
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🚀 Funcionalidades Implementadas
 
-When you're ready, run:
+* 🏠 **Tela Home** — Central de acesso rápido às funções principais.
+* 👤 **Tela Usuário** — Cadastro de informações pessoais (nome, contato, dados de saúde, alergias, etc.).
+* 🆘 **Tela de Emergência (SOS)** — Acionamento imediato de ajuda e acesso a informações críticas.
+* 🗺️ **Tela de Mapa** — Exibe locais seguros e traça rotas até eles.
+* 📍 **Tela de Locais Seguros** — Lista dos pontos de apoio mais próximos.
 
-```bash
-npm run reset-project
+---
+
+## 🔗 Tecnologias Utilizadas
+
+* ⚛️ React Native + Expo
+* 🔥 Expo Router (Navegação)
+* 🔗 Axios (Consumo de API)
+* 🎨 CSS-in-JS (Estilização)
+* ☕ Backend em Java (API própria)
+
+---
+
+## 🗺️ Arquitetura do Projeto
+
+```
+/SafeZone
+├── app
+│   ├── (tabs)        # Navegação principal com abas
+│   │   ├── index     # Tela inicial (Home)
+│   │   ├── usuario   # Tela de informações do usuário
+│   │   ├── mapa      # Tela de mapa com locais seguros
+│   │   ├── locais    # Lista de locais seguros
+│   │   └── sos       # Tela de emergência (SOS)
+├── assets            # Imagens e recursos visuais
+├── components        # Componentes reutilizáveis
+├── services          # Comunicação com a API
+├── styles            # Estilização global
+├── README.md
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 👥 Integrantes do Grupo
 
-To learn more about developing your project with Expo, look at the following resources:
+* Cauan da Cruz Ferreira - 558238
+* Renan Dorneles Barboza Boucault - 557820
+* Igor Dias Barrocal - 555217
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## ⚙️ Como Rodar o Projeto Localmente
 
-Join our community of developers creating universal apps.
+1. Clone o repositório:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+git clone https://github.com/Cruz-011/SafeZone.git
+```
+
+2. Acesse a pasta do projeto:
+
+```bash
+cd SafeZone
+```
+
+3. Instale as dependências:
+
+```bash
+npm install
+# ou
+yarn install
+```
+
+4. Execute o app:
+
+```bash
+npx expo start
+```
+
+---
+
+## 🔧 Configuração da API
+
+No arquivo `/services/api.js`, configure o endpoint da API:
+
+```javascript
+export const API_URL = "http://SEU_IP:PORTA";
+```
+
+---
+
+## ✅ Entregáveis Atendidos
+
+* ✅ 5 telas com navegação funcional (Home, Emergência, Usuário, Locais Seguros, Mapa)
+* ✅ CRUD completo dos dados do usuário e locais
+* ✅ Estilização alinhada ao propósito (simples, clara, objetiva)
+* ✅ Integração com API backend em Java
+* ✅ Vídeo de apresentação da solução
+
+---
+
+## 💡 Considerações Finais
+
+O **SafeZone** é um app criado com propósito e foco em emergências. Uma ferramenta prática, direta, **onde cada segundo conta.** Interface intuitiva, sem burocracia, sem login. É abrir e agir.
