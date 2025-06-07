@@ -2,7 +2,7 @@
 
 ## 🎥 Link do vídeo de apresentação
 
-👉 \[Adicione aqui o link do vídeo no YouTube]
+https://youtube.com/shorts/iXE0GYO6HXg?feature=share
 
 ---
 
