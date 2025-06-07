@@ -34,7 +34,8 @@ Oferecer uma solução rápida e acessível para situações de emergência, per
 * 🔥 Expo Router (Navegação)
 * 🔗 Axios (Consumo de API)
 * 🎨 CSS-in-JS (Estilização)
-* ☕ Backend em Java (API própria)
+* ☕ Backend em **Java + Spring Boot** (API própria com CRUD)
+* 💾 Banco H2 (em memória)
 
 ---
 
@@ -52,6 +53,7 @@ Oferecer uma solução rápida e acessível para situações de emergência, per
 ├── assets            # Imagens e recursos visuais
 ├── components        # Componentes reutilizáveis
 ├── services          # Comunicação com a API
+│   └── api.js        # Arquivo de configuração da URL base da API
 ├── styles            # Estilização global
 ├── README.md
 ```
@@ -66,7 +68,7 @@ Oferecer uma solução rápida e acessível para situações de emergência, per
 
 ---
 
-## ⚙️ Como Rodar o Projeto Localmente
+## ⚙️ Como Rodar o Projeto Mobile (React Native)
 
 1. Clone o repositório:
 
@@ -88,7 +90,7 @@ npm install
 yarn install
 ```
 
-4. Execute o app:
+4. Inicie o app:
 
 ```bash
 npx expo start
@@ -96,26 +98,64 @@ npx expo start
 
 ---
 
-## 🔧 Configuração da API
+## ☕ Como Rodar o Backend Java (Spring Boot)
 
-No arquivo `/services/api.js`, configure o endpoint da API:
+1. Vá até a pasta `safezone-backend` (adicionada à raiz).
+2. No terminal, execute:
 
-```javascript
-export const API_URL = "http://SEU_IP:PORTA";
+```bash
+./mvnw spring-boot:run
 ```
+
+> Ou, se estiver usando VS Code com extensões Java/Spring Boot:
+>
+> * Abra a pasta `safezone-backend`
+> * Rode pelo **Spring Boot Dashboard** com um clique
+
+3. A API será iniciada em:
+
+```
+http://localhost:8080
+```
+
+Acesse o console do banco em:
+
+```
+http://localhost:8080/h2-console
+```
+
+**JDBC URL:** `jdbc:h2:mem:testdb`
+**Usuário:** `sa`
+**Senha:** *(em branco)*
+
+---
+
+## 🔧 Configuração do Frontend com a API
+
+No arquivo `/services/api.js`, defina o IP da sua máquina (se estiver rodando o backend local):
+
+```js
+export const API_URL = "http://192.168.X.X:8080";
+```
+
+Substitua `192.168.X.X` pelo IP local (ou use `localhost` se estiver rodando no emulador).
 
 ---
 
 ## ✅ Entregáveis Atendidos
 
 * ✅ 5 telas com navegação funcional (Home, Emergência, Usuário, Locais Seguros, Mapa)
-* ✅ CRUD completo dos dados do usuário e locais
-* ✅ Estilização alinhada ao propósito (simples, clara, objetiva)
-* ✅ Integração com API backend em Java
+* ✅ CRUD completo dos dados do usuário (via Java Spring Boot)
+* ✅ Estilização clara e objetiva
+* ✅ Integração com backend real
 * ✅ Vídeo de apresentação da solução
 
 ---
 
 ## 💡 Considerações Finais
 
-O **SafeZone** é um app criado com propósito e foco em emergências. Uma ferramenta prática, direta, **onde cada segundo conta.** Interface intuitiva, sem burocracia, sem login. É abrir e agir.
+O **SafeZone** é mais que um app. É uma iniciativa de impacto, feita pra funcionar **onde cada segundo conta**.
+Com backend robusto em Java e front em React Native, unimos tecnologia e propósito.
+
+---
+
